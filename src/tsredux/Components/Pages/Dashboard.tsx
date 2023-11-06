@@ -1,23 +1,15 @@
 
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Layout, Menu } from 'antd';
 import { UserOutlined, TeamOutlined } from '@ant-design/icons';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
-// import { Content } from 'antd/es/layout/layout';
-// import { useStore } from '../../Hooks/useStore';
-
 const { Sider } = Layout;
 
 const Dashboard = () => {
-  // const location = useLocation();
-
-  const [isLoginUser , setIsLoginUser] = useState(localStorage.getItem('tokens'))
 
   const navigate = useNavigate()
-
-  // const { indexStore: { store } } = useStore();
   function isLoggedIn() {
     return !!localStorage.getItem('tokens');     // ! -> convert boolean value
   }
